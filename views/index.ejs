@@ -1,0 +1,77 @@
+<%- include('header'); -%>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Content -->
+   <img src="/img/cabecera.jpg" class="img-fluid" alt="...">
+   <div class="text-center">
+      <h1 class="main-title">Aquí podemos mirar y crear nuevas sucursales!</h1>
+    <h3>Elije una opción en el menu para empezar</h3>
+   </div>
+
+    <!-- Image Slider -->
+<div class="image-slider">
+   <img src="/img/imagen1.png" class="slide" alt="Imagen 1">
+   <img src="/img/imagen2.jpg" class="slide" alt="Imagen 2">
+   <img src="/img/imagen3.jpg" class="slide" alt="Imagen 3">
+   <!-- Añade más imágenes según sea necesario -->
+ </div>
+ 
+ <!-- JavaScript para el slider -->
+ <script>
+   let currentSlide = 0;
+   const slides = document.querySelectorAll('.slide');
+   const totalSlides = slides.length;
+ 
+   function showSlide(index) {
+     slides.forEach((slide, i) => {
+       slide.style.display = i === index ? 'block' : 'none';
+     });
+   }
+ 
+   function nextSlide() {
+     currentSlide = (currentSlide + 1) % totalSlides;
+     showSlide(currentSlide);
+   }
+ 
+   // Mostrar la primera imagen al cargar
+   showSlide(currentSlide);
+ 
+   // Cambiar la imagen cada 3 segundos
+   setInterval(nextSlide, 3000);
+ </script>
+ 
+ <%- include('footer'); -%>
+ 
+ <!-- CSS para el slider -->
+ <style>
+
+.text-center {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el texto y el slider */
+  }
+
+  .main-title {
+    color: rgb(214, 3, 3); /* Cambia el color del texto a rojo */
+  }
+
+   .image-slider {
+     position: relative;
+     width: 30%; /* Ajusta el tamaño del slider aquí */
+     margin: 0 auto; /* Centra el slider en la página */
+     overflow: hidden; /* Asegura que las imágenes no se salgan del contenedor */
+     border-radius: 10px; /* Esquinas redondeadas para el contenedor */
+   }
+ 
+   .slide {
+     display: none;
+     width: 100%;
+     height: auto;
+   }
+ 
+   .slide img {
+     width: 100%;
+     height: auto;
+     border-radius: 10px; /* Esquinas redondeadas para las imágenes */
+   }
+ </style>
+
+<%- include('footer') %>

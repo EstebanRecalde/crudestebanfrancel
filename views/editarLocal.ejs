@@ -1,0 +1,42 @@
+<%- include('header') %>
+
+<div class="container">
+  <h2>Editar Local</h2>
+  <form action="/actualizarLocal/<%= local.Id %>" method="POST">
+    <div class="mb-3">
+      <label for="Provincia" class="form-label">Provincia</label>
+      <input type="text" class="form-control" id="Provincia" name="Provincia" value="<%= local.Provincia %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="Ciudad" class="form-label">Ciudad</label>
+      <input type="text" class="form-control" id="Ciudad" name="Ciudad" value="<%= local.Ciudad %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="Direccion" class="form-label">Dirección</label>
+      <input type="text" class="form-control" id="Direccion" name="Direccion" value="<%= local.Direccion %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="Correo" class="form-label">Correo</label>
+      <input type="email" class="form-control" id="Correo" name="Correo" value="<%= local.Correo %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="Numero" class="form-label">Número</label>
+      <input type="text" class="form-control" id="Numero" name="Numero" value="<%= local.Numero %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="Gerente_General" class="form-label">Gerente General</label>
+      <input type="text" class="form-control" id="Gerente_General" name="Gerente_General" value="<%= local.Gerente_General %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="Administrador" class="form-label">Administrador</label>
+      <input type="text" class="form-control" id="Administrador" name="Administrador" value="<%= local.Administrador %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="Jefe_Recursos_Humanos" class="form-label">Jefe de Recursos Humanos</label>
+      <input type="text" class="form-control" id="Jefe_Recursos_Humanos" name="Jefe_Recursos_Humanos" value="<%= local.Jefe_Recursos_Humanos %>" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+  </form>
+</div>
+
+<%- include('footer') %>

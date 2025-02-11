@@ -1,0 +1,31 @@
+<%- include('header') %>
+
+<div class="card-header">
+  <h1 class="card-title">Información de Locales</h1>
+</div>
+<h2>Detalles de Locales</h2>
+
+<% locales.forEach(function(local) { %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title"><%= local.Ciudad %> - <%= local.Provincia %></h5>
+      <ul>
+        <li><strong>ID:</strong> <%= local.Id %></li>
+        <li><strong>Provincia:</strong> <%= local.Provincia %></li>
+        <li><strong>Ciudad:</strong> <%= local.Ciudad %></li>
+        <li><strong>Dirección:</strong> <%= local.Direccion %></li>
+        <li><strong>Correo:</strong> <%= local.Correo %></li>
+        <li><strong>Número:</strong> <%= local.Numero %></li>
+        <li><strong>Gerente General:</strong> <%= local.Gerente_General %></li>
+        <li><strong>Administrador:</strong> <%= local.Administrador %></li>
+        <li><strong>Jefe de Recursos Humanos:</strong> <%= local.Jefe_Recursos_Humanos %></li>
+      </ul>
+      <!-- Botón de Editar -->
+      <a href="/editarLocal/<%= local.Id %>" class="btn btn-warning">Editar</a>
+      <!-- Botón de Eliminar (si deseas agregarlo también) -->
+      <a href="/eliminarLocal/<%= local.Id %>" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este local?')">Eliminar</a>
+    </div>
+  </div>
+<% }); %>
+
+<%- include('footer') %>

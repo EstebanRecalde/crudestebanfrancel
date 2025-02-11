@@ -1,0 +1,42 @@
+<%- include('header') %>
+
+<div class="container mt-4">
+  <h2>Agregar Nuevo Local</h2>
+  <form action="/agregarLocal" method="POST">
+    <div class="mb-3">
+      <label for="provincia" class="form-label">Provincia</label>
+      <input type="text" class="form-control" id="provincia" name="provincia" required>
+    </div>
+    <div class="mb-3">
+      <label for="ciudad" class="form-label">Ciudad</label>
+      <input type="text" class="form-control" id="ciudad" name="ciudad" required>
+    </div>
+    <div class="mb-3">
+      <label for="direccion" class="form-label">Dirección</label>
+      <input type="text" class="form-control" id="direccion" name="direccion" required>
+    </div>
+    <div class="mb-3">
+      <label for="correo" class="form-label">Correo</label>
+      <input type="email" class="form-control" id="correo" name="correo" required>
+    </div>
+    <div class="mb-3">
+      <label for="numero" class="form-label">Número</label>
+      <input type="text" class="form-control" id="numero" name="numero" required>
+    </div>
+    <div class="mb-3">
+      <label for="gerente_general" class="form-label">Gerente General</label>
+      <input type="text" class="form-control" id="gerente_general" name="gerente_general" required>
+    </div>
+    <div class="mb-3">
+      <label for="administrador" class="form-label">Administrador</label>
+      <input type="text" class="form-control" id="administrador" name="administrador" required>
+    </div>
+    <div class="mb-3">
+      <label for="jefe_recursos_humanos" class="form-label">Jefe de Recursos Humanos</label>
+      <input type="text" class="form-control" id="jefe_recursos_humanos" name="jefe_recursos_humanos" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar Local</button>
+  </form>
+</div>
+
+<%- include('footer') %>
